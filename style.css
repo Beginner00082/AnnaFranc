@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+canvas {
+    background: #87CEEB;
+    display: block;
+    border: 3px solid #333;
+    width: 100%;
+    height: auto;
+}
+
+.ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 10px;
+    text-shadow: 2px 2px 0 #000;
+    z-index: 10;
+}
+
+.start-screen,.game-over,.win-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.game-over,.win-screen {
+    display: none;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ff003c;
+}
+
+p {
+    font-size: 10px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.controls {
+    color: #00ff41;
+    font-size: 9px;
+}
+
+button {
+    background: #00ff41;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.win-screen button {
+    background: #FFD700;
+}
+
+.final-score {
+    color: #ff003c;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 16px; }
+    p { font-size: 8px; }
+    button { font-size: 10px; padding: 12px 24px; }
+   .ui { font-size: 8px; }
+  }
