@@ -44,44 +44,60 @@ const anna = {
     },
 
     draw() {
-        // Gambe
-        ctx.fillStyle = '#333';
-        ctx.fillRect(this.x + 5, this.y + 25, 8, 15);
-        ctx.fillRect(this.x + 17, this.y + 25, 8, 15);
+        // Gambe - jeans blu
+        ctx.fillStyle = '#2c3e50';
+        ctx.fillRect(this.x + 8, this.y + 25, 6, 15);
+        ctx.fillRect(this.x + 16, this.y + 25, 6, 15);
 
-        // Corpo rosso
-        ctx.fillStyle = '#e63946';
-        ctx.fillRect(this.x + 5, this.y + 10, 20, 15);
+        // Corpo - maglia rosa
+        ctx.fillStyle = '#ff6b9d';
+        ctx.fillRect(this.x + 6, this.y + 10, 18, 15);
 
         // Testa
         ctx.fillStyle = '#f4a261';
-        ctx.fillRect(this.x + 10, this.y, 10, 10);
+        ctx.fillRect(this.x + 8, this.y, 14, 14);
 
-        // Capelli rossi/arancioni
+        // Capelli rossi/arancioni medi
         ctx.fillStyle = '#ff7b25';
-        ctx.fillRect(this.x + 8, this.y, 14, 6);
+        ctx.fillRect(this.x + 6, this.y, 18, 8);
+        ctx.fillRect(this.x + 6, this.y + 2, 4, 12); // ciocca sinistra
+        ctx.fillRect(this.x + 20, this.y + 2, 4, 12); // ciocca destra
 
-        // Bandiera sulla pancia
-        ctx.fillStyle = '#8B4513';
-        ctx.fillRect(this.x + 22, this.y + 12, 3, 12);
-        ctx.fillStyle = '#e63946';
-        ctx.fillRect(this.x + 24, this.y + 12, 12, 8);
-        ctx.fillStyle = '#ffd60a';
-        ctx.fillRect(this.x + 26, this.y + 14, 8, 4);
+        // Occhi
+        ctx.fillStyle = '#000';
+        ctx.fillRect(this.x + 11, this.y + 6, 2, 2);
+        ctx.fillRect(this.x + 17, this.y + 6, 2, 2);
+
+        // Bocca
+        ctx.fillRect(this.x + 13, this.y + 10, 4, 1);
     }
 };
 
 function drawRagazzo(x, y, width, height) {
-    // Corpo blu
-    ctx.fillStyle = '#457b9d';
-    ctx.fillRect(x, y, width, height);
+    // Gambe - pantaloni scuri
+    ctx.fillStyle = '#2c3e50';
+    ctx.fillRect(x + 4, y + 12, 5, 8);
+    ctx.fillRect(x + 11, y + 12, 5, 8);
+
+    // Corpo - maglietta
+    ctx.fillStyle = '#3498db';
+    ctx.fillRect(x + 2, y, 16, 12);
+
     // Testa
-    ctx.fillStyle = '#1d3557';
+    ctx.fillStyle = '#f4a261';
     ctx.fillRect(x + 5, y - 10, 10, 10);
+
+    // Capelli castani
+    ctx.fillStyle = '#8b5a2b';
+    ctx.fillRect(x + 4, y - 10, 12, 4);
+
     // Occhi
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(x + 7, y - 8, 2, 2);
-    ctx.fillRect(x + 11, y - 8, 2, 2);
+    ctx.fillStyle = '#000';
+    ctx.fillRect(x + 7, y - 7, 1, 1);
+    ctx.fillRect(x + 12, y - 7, 1, 1);
+
+    // Bocca
+    ctx.fillRect(x + 9, y - 4, 2, 1);
 }
 
 function gameLoop() {
