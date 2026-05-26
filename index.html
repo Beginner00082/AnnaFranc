@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Corsa della Rossa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="ui">
+            <div class="score">PUNTI: <span id="score">0</span>/1000</div>
+            <div class="high-score">RECORD: <span id="highScore">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="start-screen" id="startScreen">
+            <p style="color: #ffaa00; font-size: 8px; margin-bottom: 10px;">By Vicienz</p>
+            <h1>CORSA DELLA ROSSA</h1>
+            <p>Scappa dai ragazzi!</p>
+            <p class="controls">TAP o SPAZIO per saltare</p>
+            <button id="playBtn">GIOCA</button>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h1>GAME OVER</h1>
+            <p id="finalMessage">Ti hanno beccato!</p>
+            <p class="final-score">Punti: <span id="finalScore">0</span></p>
+            <button id="retryBtn">RIPROVA</button>
+        </div>
+
+        <div class="win-screen" id="winScreen">
+            <h1>VITTORIA! 🏆</h1>
+            <p>La Rossa è salva!</p>
+            <p>1000 punti raggiunti</p>
+            <button id="replayBtn">RIGIOCA</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                                              </html>
